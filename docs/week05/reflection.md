@@ -1,0 +1,10 @@
+Week 5 Reflection - AFL 1
+
+1. Which structural decision from Week 1 helped you most by Week 5?
+Keputusan paling krusial yang sangat membantu saya adalah pemisahan struktur data (Model) dari kode tampilan (UI Layer). Ketika memasuki Week 5 dan harus melakukan rebranding aplikasi menjadi "PartyPay" (untuk menyesuaikan dengan Track C) serta merombak total antarmuka UI demi mengatasi masalah overflow, saya tidak perlu merusak atau menyusun ulang logika datanya. Saya bisa fokus sepenuhnya pada pembungkusan widget (seperti Sliver dan NestedScrollView) karena fondasi datanya sudah terisolasi dengan rapi sejak awal.
+
+2. Which one cost you time, and what would you do differently?
+Penggunaan Column dan ListView secara asal-asalan tanpa mempertimbangkan batasan ruang (layout constraints) sangat menguras waktu saya. Hal ini menyebabkan peringatan Unbounded Height dan Bottom Overflow yang parah, terutama saat keyboard muncul atau layar diputar. Jika harus mengulang, saya akan memikirkan batasan ruang (Expanded atau Flexible) dan menggunakan strategi scroll tingkat lanjut (seperti NestedScrollView atau CustomScrollView) sejak awal perancangan screen yang kompleks, bukan memperbaikinya di akhir.
+
+3. Where is your app's state right now, and what will be hard about moving it in Module 2?
+Saat ini, state aplikasi saya masih berwujud data dummy statis (berada di file harness atau terikat secara lokal menggunakan setState). Tantangan terberat saat memasuki Module 2 adalah memindahkan state statis ini menjadi data yang persisten dan dinamis (misalnya terhubung dengan database lokal atau API). Selain itu, saya harus merombak cara komponen UI berkomunikasi untuk menggunakan pendekatan State Management yang lebih profesional, agar state bisa dibagikan (shared state) antar layar tanpa harus melempar data melalui constructor terus-menerus.
