@@ -1,0 +1,3 @@
+Why Center is a separate widget rather than a property of Text?
+
+Alasan mengapa center adalah widget yang terpisah dan bukan properti dari widget text adalah karena flutter sendiri menganut prinsip single responsibility, yaitu flutter mendesain agar setiap widget hanya memiliki satu fokus tugas saja atau satu tugas spesifik. Dengan adanya prinsip tersebut membuat widget text murni hanya bertanggung jawab untuk menampilkan tulisan, sedangkan center bertanggung jawab untuk mengatur tata letak agar tetap berada di tengah sehingga membuatnya lebih ringan dan efisien. Dengan kita memisahkan widget center dengan widget text, kita bisa menggunakannya dengan lebih fleksibel untuk mengatur tata letak komponen apapun agar tetap di tengah pada flutter.
